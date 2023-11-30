@@ -9,6 +9,8 @@ public class BallController : MonoBehaviour
     // Start is called before the first frame update
 
     private BallData ballData;
+
+    public InGameTimer InGameTimer;
     private void Start()
     {
         ballRigidBody = this.GetComponent<Rigidbody>();
@@ -16,6 +18,15 @@ public class BallController : MonoBehaviour
         Debug.Log(ballData.GetHitPoint);
 
 
+    }
+
+
+    private void Update()
+    {
+        if (InGameTimer.GetTimerTime <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
     public void BallMove(Vector3 direction)
     {
