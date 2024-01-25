@@ -5,11 +5,11 @@ using UnityEngine;
 public class TouchPhaseTracker : MonoBehaviour
 {
     public int fingerID;
-    public UnityEvent onBegan;
+/*    public UnityEvent onBegan;
     public UnityEvent onStationary;
     public UnityEvent onMoved;
     public UnityEvent onEnded;
-    public UnityEvent onCancelled;
+    public UnityEvent onCancelled;*/
 
     private void Update()
     {
@@ -29,7 +29,7 @@ public class TouchPhaseTracker : MonoBehaviour
     {
         switch (phase)
         {
-            case TouchPhase.Began:
+            /*case TouchPhase.Began:
                 onBegan.Invoke();
                 break;
             case TouchPhase.Stationary:
@@ -43,7 +43,7 @@ public class TouchPhaseTracker : MonoBehaviour
                 break;
             case TouchPhase.Canceled:
                 onCancelled.Invoke();
-                break;
+                break;*/
         }
     }
 
